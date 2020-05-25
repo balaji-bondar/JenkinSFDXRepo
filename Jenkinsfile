@@ -2,6 +2,7 @@
 import groovy.json.JsonSlurperClassic
 node {
 
+    println '@@@@Inside node...' 
     def BUILD_NUMBER=env.BUILD_NUMBER
     println BUILD_NUMBER     	
     def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"
@@ -12,7 +13,7 @@ node {
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
     def CONNECTED_APP_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
 
-    println '@@@@@Environment Variables' 
+    println '@@@@Environment Variables' 
     println JWT_KEY_CRED_ID
     println HUB_ORG
     println SFDC_HOST

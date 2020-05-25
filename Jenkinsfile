@@ -8,16 +8,17 @@ node {
     def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"
     def SFDC_USERNAME
 
+    def CONNECTED_APP_CONSUMER_KEY= env.CONNECTED_APP_CONSUMER_KEY_DH
     def HUB_ORG= env.HUB_ORG_DH
     def SFDC_HOST = env.SFDC_HOST_DH
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
-	def CONNECTED_APP_CONSUMER_KEY= env.CONNECTED_APP_CONSUMER_KEY_DH
-
-    println '@@@@Environment Variables' 
-    println JWT_KEY_CRED_ID
+    
+    println '@@@@Environment Variables...' 
+    println CONNECTED_APP_CONSUMER_KEY    
     println HUB_ORG
     println SFDC_HOST
-    println CONNECTED_APP_CONSUMER_KEY
+    println JWT_KEY_CRED_ID
+    
     def toolbelt = tool 'toolbelt'
 
     stage('checkout source') {
